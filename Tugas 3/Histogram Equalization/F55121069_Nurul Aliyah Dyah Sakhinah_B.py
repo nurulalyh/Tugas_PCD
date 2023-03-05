@@ -1,31 +1,31 @@
 #Nurul ALiyah Dyah Sakhinah_F55121069
 
-#Import Library
+#Import Library yang dibutuhkan
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-# Load image in grayscale
-img = cv2.imread('image.jpg', 0)
+# Masukkan Gambar
+img = cv2.imread('image.jpg')
 
-# Calculate histogram
+# Hitung histogram
 hist, bins = np.histogram(img.flatten(), 256, [0, 256])
 
-# Calculate cumulative distribution function
+# Hitung fungsi distribusi kumulatif
 cdf = hist.cumsum()
 cdf_normalized = cdf * hist.max() / cdf.max()
 
-# Apply equalization
+# Terapkan equalization
 img_equalized = cv2.equalizeHist(img)
 
-# Calculate equalized histogram
+# Hitung equalized histogram
 hist_equalized, bins = np.histogram(img_equalized.flatten(), 256, [0, 256])
 
-# Calculate equalized cumulative distribution function
+# Hitung fungsi distribusi kumulatif yang diequalized
 cdf_equalized = hist_equalized.cumsum()
 cdf_normalized_equalized = cdf_equalized * hist_equalized.max() / cdf_equalized.max()
 
-# Plot histograms and cumulative distribution functions
+# Plot histogram dan fungsi distribusi kumulatif
 plt.subplot(221), plt.imshow(img, cmap='gray')
 plt.title('Original Image'), plt.xticks([]), plt.yticks([])
 plt.subplot(222), plt.hist(img.flatten(), 256, [0, 256], color='r')
