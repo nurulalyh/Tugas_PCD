@@ -1,4 +1,4 @@
-#Nurul ALiyah Dyah Sakhinah_F55121069_B
+#Nurul ALiyah Dyah Sakhinah_F55121069
 
 # Import Library yang dibutuhkan
 import cv2
