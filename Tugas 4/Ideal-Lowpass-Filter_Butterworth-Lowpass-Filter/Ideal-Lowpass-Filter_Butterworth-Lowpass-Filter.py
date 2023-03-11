@@ -1,3 +1,8 @@
+# Nama  : Nurul Aliyah Dyah Sakhinah
+# NIM   : F55121069
+# Tugas : Program menerapkan Ideal Lowpass Filter dan Butterworth Lowpass Filter
+
+#Import semua library yang dibutuhkan
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
